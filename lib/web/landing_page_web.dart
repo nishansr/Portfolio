@@ -105,6 +105,107 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ],
             ),
           ),
+
+          //! Second Page
+          Container(
+            height: heightDevice / 1.5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Image.asset(
+                  "web.jpg",
+                  height: heightDevice / 1.7,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SansBold("About me", 40),
+                    SizedBox(height: 15),
+                    Sans(
+                        "Hello! I'm Nishan Bishwokarma. I specialize in flutter development.",
+                        20),
+                    Sans(
+                        "I strive to ensure astounding performance with state of ",
+                        20),
+                    Sans(
+                        "the art security for Android, IOS, Web, Mac, Linux and Windows.",
+                        20),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromARGB(255, 245, 200, 235),
+                              style: BorderStyle.solid,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          padding: EdgeInsets.all(7),
+                          child: Sans("Flutter", 20),
+                        ),
+                        SizedBox(width: 7),
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromARGB(255, 245, 200, 235),
+                              style: BorderStyle.solid,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          padding: EdgeInsets.all(7),
+                          child: Sans("Firebase", 20),
+                        ),
+                        SizedBox(width: 7),
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromARGB(255, 245, 200, 235),
+                              style: BorderStyle.solid,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          padding: EdgeInsets.all(7),
+                          child: Sans("Android", 20),
+                        ),
+                        SizedBox(width: 7),
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromARGB(255, 245, 200, 235),
+                              style: BorderStyle.solid,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          padding: EdgeInsets.all(7),
+                          child: Sans("IOS", 20),
+                        ),
+                        SizedBox(width: 7),
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromARGB(255, 245, 200, 235),
+                              style: BorderStyle.solid,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          padding: EdgeInsets.all(7),
+                          child: Sans("Linux", 20),
+                        ),
+                        SizedBox(width: 7),
+                      ],
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
