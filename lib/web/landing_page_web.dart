@@ -106,7 +106,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             ),
           ),
 
-          //! Second Page
+          //! About Page
           Container(
             height: heightDevice / 1.5,
             child: Row(
@@ -201,6 +201,85 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         SizedBox(width: 7),
                       ],
                     )
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          //! Works Page
+          Container(
+            height: heightDevice / 1.3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SansBold("What I do?", 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Card(
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      shadowColor: Color.fromARGB(255, 245, 200, 235),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "webL.png",
+                              height: 200,
+                              width: 200,
+                            ),
+                            SizedBox(height: 10),
+                            SansBold("Web Development", 15)
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      shadowColor: Color.fromARGB(255, 245, 200, 235),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "app.png",
+                              height: 200,
+                              width: 200,
+                            ),
+                            SizedBox(height: 10),
+                            SansBold("App Development", 15)
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      shadowColor: Color.fromARGB(255, 245, 200, 235),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "firebase.png",
+                              height: 200,
+                              width: 200,
+                            ),
+                            SizedBox(height: 10),
+                            SansBold("Backend Development", 15)
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ],
