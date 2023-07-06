@@ -231,6 +231,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                               "webL.png",
                               height: 200,
                               width: 200,
+                              fit: BoxFit.contain,
                             ),
                             SizedBox(height: 10),
                             SansBold("Web Development", 15)
@@ -252,6 +253,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                               "app.png",
                               height: 200,
                               width: 200,
+                              fit: BoxFit.contain,
                             ),
                             SizedBox(height: 10),
                             SansBold("App Development", 15)
@@ -271,6 +273,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                           children: [
                             Image.asset(
                               "firebase.png",
+                              fit: BoxFit.contain,
                               height: 200,
                               width: 200,
                             ),
