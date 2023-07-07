@@ -1,6 +1,9 @@
 //ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import '../components.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../components/tabs_web.dart';
+import '../components/text.dart';
+import '../components/text_input.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({super.key});
@@ -13,6 +16,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
     var heightDevice = MediaQuery.of(context).size.height;
+    var widthDevice = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: Drawer(),
       backgroundColor: Colors.white,
@@ -284,6 +288,54 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       ),
                     ),
                   ],
+                ),
+              ],
+            ),
+          ),
+
+          //! Contact page
+          Container(
+            height: heightDevice,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SansBold("Contact me", 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        TextForm(
+                            heading: "First Name",
+                            width: widthDevice / 4,
+                            hintText: "Enter your first name!"),
+                        SizedBox(height: 15),
+                        TextForm(
+                            heading: "E-mail",
+                            width: widthDevice / 4,
+                            hintText: "Enter your email address!"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        TextForm(
+                            heading: "Last Name",
+                            width: widthDevice / 4,
+                            hintText: "Enter your last name!"),
+                        SizedBox(height: 15),
+                        TextForm(
+                            heading: "Phone Number",
+                            width: widthDevice / 4,
+                            hintText: "Enter your phone!"),
+                      ],
+                    ),
+                  ],
+                ),
+                TextForm(
+                  heading: "Message",
+                  width: widthDevice / 1.5,
+                  hintText: "Enter your message!",
+                  maxLine: 6,
                 ),
               ],
             ),
