@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components/text.dart';
 
@@ -7,12 +8,13 @@ class TextForm extends StatelessWidget {
   final width;
   final hintText;
   final maxLine;
-  const TextForm(
-      {super.key,
-      @required this.heading,
-      @required this.width,
-      @required this.hintText,
-      this.maxLine});
+  const TextForm({
+    super.key,
+    @required this.heading,
+    @required this.width,
+    @required this.hintText,
+    this.maxLine,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 //ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/components/card.dart';
 import '../components/tabs_web.dart';
 import '../components/text.dart';
 import '../components/text_input.dart';
@@ -221,72 +221,12 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
-                      shadowColor: Color.fromARGB(255, 245, 200, 235),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "webL.png",
-                              height: 200,
-                              width: 200,
-                              fit: BoxFit.contain,
-                            ),
-                            SizedBox(height: 10),
-                            SansBold("Web Development", 15)
-                          ],
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
-                      shadowColor: Color.fromARGB(255, 245, 200, 235),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "app.png",
-                              height: 200,
-                              width: 200,
-                              fit: BoxFit.contain,
-                            ),
-                            SizedBox(height: 10),
-                            SansBold("App Development", 15)
-                          ],
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
-                      shadowColor: Color.fromARGB(255, 245, 200, 235),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "firebase.png",
-                              fit: BoxFit.contain,
-                              height: 200,
-                              width: 200,
-                            ),
-                            SizedBox(height: 10),
-                            SansBold("Backend Development", 15)
-                          ],
-                        ),
-                      ),
-                    ),
+                    AnimatedCardWeb(
+                        imagePath: "webL.png", text: "Web Development"),
+                    AnimatedCardWeb(
+                        imagePath: "app.png", text: "App Development"),
+                    AnimatedCardWeb(
+                        imagePath: "firebase.png", text: "Backend Development"),
                   ],
                 ),
               ],
@@ -326,7 +266,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         TextForm(
                             heading: "Phone Number",
                             width: widthDevice / 4,
-                            hintText: "Enter your phone!"),
+                            hintText: "Enter your phone number!"),
                       ],
                     ),
                   ],
@@ -337,6 +277,18 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   hintText: "Enter your message!",
                   maxLine: 6,
                 ),
+                MaterialButton(
+                  elevation: 20,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  height: 60,
+                  minWidth: 200,
+                  color: Color.fromARGB(255, 245, 200, 235),
+                  child: Sans("Submit", 20),
+                  onPressed: () {},
+                ),
+                SizedBox(height: 25)
               ],
             ),
           )
