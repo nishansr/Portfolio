@@ -221,11 +221,13 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    AnimatedCardWeb(
-                        imagePath: "webL.png", text: "Web Development"),
-                    AnimatedCardWeb(
-                        imagePath: "app.png", text: "App Development"),
-                    AnimatedCardWeb(
+                    AnimatedCard(
+                      imagePath: "webL.png",
+                      text: "Web Development",
+                      reverse: true,
+                    ),
+                    AnimatedCard(imagePath: "app.png", text: "App Development"),
+                    AnimatedCard(
                         imagePath: "firebase.png", text: "Backend Development"),
                   ],
                 ),
